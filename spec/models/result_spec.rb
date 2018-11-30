@@ -4,6 +4,8 @@ RSpec.describe Result, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:comments) }
+
     it { should belong_to(:race) }
 
     it { should belong_to(:user) }
