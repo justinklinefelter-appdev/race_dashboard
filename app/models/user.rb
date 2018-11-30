@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :comments,
+             :foreign_key => "commentor_id",
+             :dependent => :destroy
+
   has_many   :results,
              :dependent => :destroy
 
