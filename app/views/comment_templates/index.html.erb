@@ -68,13 +68,21 @@
 
         <!-- Display comment.commentor_id start -->
         <td>
-          <%= comment.commentor.created_at %>
+          <% if comment.commentor.present? %>
+            <a href="/users/<%= comment.commentor.id %>">
+              <%= comment.commentor.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display comment.commentor_id end -->
 
         <!-- Display comment.result_id start -->
         <td>
-          <%= comment.result.user_id %>
+          <% if comment.result.present? %>
+            <a href="/results/<%= comment.result.id %>">
+              <%= comment.result.user_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display comment.result_id end -->
 

@@ -43,7 +43,11 @@
       </dt>
       <!-- Display commentor_id start -->
       <dd>
-        <%= @comment.commentor_id %>
+        <% if @comment.commentor.present? %>
+          <a href="/users/<%= @comment.commentor_id %>">
+            <%= @comment.commentor.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display commentor_id end -->
 
@@ -52,7 +56,11 @@
       </dt>
       <!-- Display result_id start -->
       <dd>
-        <%= @comment.result_id %>
+        <% if @comment.result.present? %>
+          <a href="/results/<%= @comment.result_id %>">
+            <%= @comment.result.user_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display result_id end -->
 

@@ -74,13 +74,21 @@
 
         <!-- Display result.user_id start -->
         <td>
-          <%= result.user.created_at %>
+          <% if result.user.present? %>
+            <a href="/users/<%= result.user.id %>">
+              <%= result.user.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display result.user_id end -->
 
         <!-- Display result.race_id start -->
         <td>
-          <%= result.race.name %>
+          <% if result.race.present? %>
+            <a href="/races/<%= result.race.id %>">
+              <%= result.race.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display result.race_id end -->
 

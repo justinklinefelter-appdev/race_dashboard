@@ -43,7 +43,11 @@
       </dt>
       <!-- Display event_id start -->
       <dd>
-        <%= @race.event_id %>
+        <% if @race.event.present? %>
+          <a href="/events/<%= @race.event_id %>">
+            <%= @race.event.distance_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display event_id end -->
 
