@@ -1,0 +1,57 @@
+<h1>
+  Add a new comment
+</h1>
+
+
+<hr>
+
+<!-- Form comment start -->
+<form action="/create_comment" method="post">
+<!-- Form comment end -->
+
+  <!-- Label and input for body start -->
+  <div class="form-group">
+    <label for="body">
+      Body
+    </label>
+
+    <!-- Input for body start -->
+    <input type="text" id="body" name="body" class="form-control">
+    <!-- Input for body end -->
+  </div>
+  <!-- Label and input for body end -->
+
+  <!-- Label and input for commentor_id start -->
+  <div class="form-group">
+    <label for="commentor_id">
+      Commentor
+    </label>
+
+    <!-- Input for commentor_id start -->
+    <input type="text" id="commentor_id" name="commentor_id" class="form-control">
+    <!-- Input for commentor_id end -->
+  </div>
+  <!-- Label and input for commentor_id end -->
+
+  <!-- Label and input for result_id start -->
+  <div class="form-group">
+    <label for="result_id">
+      Result
+    </label>
+
+    <!-- Input for result_id start -->
+    <input type="text" id="result_id" name="result_id" class="form-control">
+    <!-- Input for result_id end -->
+  </div>
+  <!-- Label and input for result_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create comment
+  </button>
+</form>
+
+<hr>
+
+<a href="/comments">
+  Go back
+</a>
