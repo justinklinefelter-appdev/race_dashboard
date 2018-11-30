@@ -1,0 +1,109 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Result #<%= @result.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/results" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link result start -->
+      <div class="col">
+        <a href="/results/<%= @result.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit result
+        </a>
+      </div>
+      <!-- Edit link result end -->
+
+      <!-- Delete link result start -->
+      <div class="col">
+        <a href="/delete_result/<%= @result.id %>" class="btn btn-block btn-outline-secondary">
+          Delete result
+        </a>
+      </div>
+      <!-- Delete link result end -->
+    </div>
+
+    <dl>
+      <dt>
+        User
+      </dt>
+      <!-- Display user_id start -->
+      <dd>
+        <%= @result.user_id %>
+      </dd>
+      <!-- Display user_id end -->
+
+      <dt>
+        Race
+      </dt>
+      <!-- Display race_id start -->
+      <dd>
+        <%= @result.race_id %>
+      </dd>
+      <!-- Display race_id end -->
+
+      <dt>
+        Time
+      </dt>
+      <!-- Display time start -->
+      <dd>
+        <%= @result.time %>
+      </dd>
+      <!-- Display time end -->
+
+      <dt>
+        Overall place
+      </dt>
+      <!-- Display overall_place_id start -->
+      <dd>
+        <%= @result.overall_place_id %>
+      </dd>
+      <!-- Display overall_place_id end -->
+
+      <dt>
+        Age group place
+      </dt>
+      <!-- Display age_group_place_id start -->
+      <dd>
+        <%= @result.age_group_place_id %>
+      </dd>
+      <!-- Display age_group_place_id end -->
+
+      <dt>
+        Body
+      </dt>
+      <!-- Display body start -->
+      <dd>
+        <%= @result.body %>
+      </dd>
+      <!-- Display body end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@result.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@result.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

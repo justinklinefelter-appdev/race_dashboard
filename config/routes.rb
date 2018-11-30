@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Result resource:
+
+  # CREATE
+  get("/results/new", { :controller => "results", :action => "new_form" })
+  post("/create_result", { :controller => "results", :action => "create_row" })
+
+  # READ
+  get("/results", { :controller => "results", :action => "index" })
+  get("/results/:id_to_display", { :controller => "results", :action => "show" })
+
+  # UPDATE
+  get("/results/:prefill_with_id/edit", { :controller => "results", :action => "edit_form" })
+  post("/update_result/:id_to_modify", { :controller => "results", :action => "update_row" })
+
+  # DELETE
+  get("/delete_result/:id_to_remove", { :controller => "results", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Comment resource:
 
   # CREATE

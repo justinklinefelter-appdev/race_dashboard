@@ -1,0 +1,132 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All results
+    </h1>
+
+    <a href="/results/new" class="btn btn-block btn-outline-secondary">
+      Add a new result
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          User
+        </th>
+
+        <th>
+          Race
+        </th>
+
+        <th>
+          Time
+        </th>
+
+        <th>
+          Overall place
+        </th>
+
+        <th>
+          Age group place
+        </th>
+
+        <th>
+          Body
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @results.each do |result| %>
+      <tr>
+        <!-- Display result.id start -->
+        <td>
+          <%= result.id %>
+        </td>
+        <!-- Display result.id end -->
+
+        <!-- Display result.user_id start -->
+        <td>
+          <%= result.user_id %>
+        </td>
+        <!-- Display result.user_id end -->
+
+        <!-- Display result.race_id start -->
+        <td>
+          <%= result.race_id %>
+        </td>
+        <!-- Display result.race_id end -->
+
+        <!-- Display result.time start -->
+        <td>
+          <%= result.time %>
+        </td>
+        <!-- Display result.time end -->
+
+        <!-- Display result.overall_place_id start -->
+        <td>
+          <%= result.overall_place_id %>
+        </td>
+        <!-- Display result.overall_place_id end -->
+
+        <!-- Display result.age_group_place_id start -->
+        <td>
+          <%= result.age_group_place_id %>
+        </td>
+        <!-- Display result.age_group_place_id end -->
+
+        <!-- Display result.body start -->
+        <td>
+          <%= result.body %>
+        </td>
+        <!-- Display result.body end -->
+
+        <!-- Display result.created_at start -->
+        <td>
+          <%= time_ago_in_words(result.created_at) %> ago
+        </td>
+        <!-- Display result.created_at end -->
+
+        <!-- Display result.updated_at start -->
+        <td>
+          <%= time_ago_in_words(result.updated_at) %> ago
+        </td>
+        <!-- Display result.updated_at end -->
+
+        <td>
+          <a href="/results/<%= result.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
