@@ -1,6 +1,11 @@
 class RacesController < ApplicationController
   def index
     @races = Race.all
+    @location_hash = Gmaps4rails.build_markers(@races.where.not(:location_id_latitude => nil)) do |race, marker|
+      marker.lat race.location_id_latitude
+      marker.lng race.location_id_longitude
+      marker.infowindow "<h5><a href='/races/#{race.id}'>#{race.name}</a></h5><small>#{race.location_id_formatted_address}</small>"
+    end
 
     render("race_templates/index.html.erb")
   end

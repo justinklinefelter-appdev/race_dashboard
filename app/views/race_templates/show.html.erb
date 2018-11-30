@@ -61,7 +61,9 @@
       </dt>
       <!-- Display location_id start -->
       <dd>
-        <%= @race.location_id %>
+        <div>
+          <%= render partial: "race_templates/one_photo_map" %>
+        </div>
       </dd>
       <!-- Display location_id end -->
 
