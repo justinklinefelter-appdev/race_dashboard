@@ -61,6 +61,22 @@ class ResultsController < ApplicationController
     end
   end
 
+  def destroy_row_from_user
+    @result = Result.find(params.fetch("id_to_remove"))
+
+    @result.destroy
+
+    redirect_to("/users/#{@result.user_id}", notice: "Result deleted successfully.")
+  end
+
+  def destroy_row_from_race
+    @result = Result.find(params.fetch("id_to_remove"))
+
+    @result.destroy
+
+    redirect_to("/races/#{@result.race_id}", notice: "Result deleted successfully.")
+  end
+
   def destroy_row
     @result = Result.find(params.fetch("id_to_remove"))
 

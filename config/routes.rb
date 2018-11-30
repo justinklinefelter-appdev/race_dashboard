@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_result/:id_to_remove", { :controller => "results", :action => "destroy_row" })
+  get("/delete_result_from_race/:id_to_remove", { :controller => "results", :action => "destroy_row_from_race" })
+  get("/delete_result_from_user/:id_to_remove", { :controller => "results", :action => "destroy_row_from_user" })
 
   #------------------------------
 
@@ -37,6 +39,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_comment/:id_to_remove", { :controller => "comments", :action => "destroy_row" })
+  get("/delete_comment_from_result/:id_to_remove", { :controller => "comments", :action => "destroy_row_from_result" })
+  get("/delete_comment_from_commentor/:id_to_remove", { :controller => "comments", :action => "destroy_row_from_commentor" })
 
   #------------------------------
 
@@ -56,6 +60,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_race/:id_to_remove", { :controller => "races", :action => "destroy_row" })
+  get("/delete_race_from_event/:id_to_remove", { :controller => "races", :action => "destroy_row_from_event" })
 
   #------------------------------
 
