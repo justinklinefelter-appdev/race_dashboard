@@ -1,0 +1,73 @@
+<!-- Form result start -->
+<form action="/create_result_from_race" method="post">
+<!-- Form result end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @result.user_id %>">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for race_id start -->
+  <!-- Input for race_id start -->
+  <input type="hidden" name="race_id" value="<%= @race.id %>">
+  <!-- Input for race_id end -->
+
+  <!-- Label and input for time start -->
+  <div class="form-group">
+    <label for="time">
+      Time
+    </label>
+
+    <!-- Input for time start -->
+    <input type="text" id="time" name="time" class="form-control" value="<%= @result.time %>">
+    <!-- Input for time end -->
+  </div>
+  <!-- Label and input for time end -->
+
+  <!-- Label and input for overall_place_id start -->
+  <div class="form-group">
+    <label for="overall_place_id">
+      Overall place
+    </label>
+
+    <!-- Input for overall_place_id start -->
+    <input type="text" id="overall_place_id" name="overall_place_id" class="form-control" value="<%= @result.overall_place_id %>">
+    <!-- Input for overall_place_id end -->
+  </div>
+  <!-- Label and input for overall_place_id end -->
+
+  <!-- Label and input for age_group_place_id start -->
+  <div class="form-group">
+    <label for="age_group_place_id">
+      Age group place
+    </label>
+
+    <!-- Input for age_group_place_id start -->
+    <input type="text" id="age_group_place_id" name="age_group_place_id" class="form-control" value="<%= @result.age_group_place_id %>">
+    <!-- Input for age_group_place_id end -->
+  </div>
+  <!-- Label and input for age_group_place_id end -->
+
+  <!-- Label and input for body start -->
+  <div class="form-group">
+    <label for="body">
+      Body
+    </label>
+
+    <!-- Input for body start -->
+    <input type="text" id="body" name="body" class="form-control" value="<%= @result.body %>">
+    <!-- Input for body end -->
+  </div>
+  <!-- Label and input for body end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create result
+  </button>
+</form>
