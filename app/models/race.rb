@@ -8,6 +8,10 @@ class Race < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :users,
+             :through => :results,
+             :source => :user
+
   # Validations
 
 end
