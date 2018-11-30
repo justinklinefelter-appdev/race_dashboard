@@ -65,7 +65,7 @@ class ResultsController < ApplicationController
   def update_row
     @result = Result.find(params.fetch("id_to_modify"))
 
-    @result.user_id = params.fetch("user_id")
+    
     @result.race_id = params.fetch("race_id")
     @result.time = params.fetch("time")
     @result.overall_place_id = params.fetch("overall_place_id")
