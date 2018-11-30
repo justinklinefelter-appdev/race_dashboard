@@ -10,7 +10,8 @@ class ResultsController < ApplicationController
   end
 
   def index
-    @results = Result.page(params[:page]).per(10)
+    @q = Result.ransack(params[:q])
+    @results = @q.result(:distinct => true).includes(:user, :race, :comments).page(params[:page]).per(10)
 
     render("result_templates/index.html.erb")
   end
