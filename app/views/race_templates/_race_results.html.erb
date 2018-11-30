@@ -10,28 +10,22 @@
   <ul class="list-group list-group-flush">
     <% @race.results.each do |result| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/results/<%= result.id %>">
           <%= result.user_id %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <%if current_user == result.user %>
           <a href="/delete_result_from_race/<%= result.id %>">
             Delete
           </a>
         <% end %>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="race_results_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "race_templates/race_results_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 

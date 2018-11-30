@@ -11,37 +11,30 @@
         </a>
       </div>
 
-      <!-- Edit link race start -->
       <div class="col">
         <a href="/races/<%= @race.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit race
         </a>
       </div>
-      <!-- Edit link race end -->
 
-      <!-- Delete link race start -->
       <div class="col">
         <a href="/delete_race/<%= @race.id %>" class="btn btn-block btn-outline-secondary">
           Delete race
         </a>
       </div>
-      <!-- Delete link race end -->
     </div>
 
     <dl>
       <dt>
         Name
       </dt>
-      <!-- Display name start -->
       <dd>
         <%= @race.name %>
       </dd>
-      <!-- Display name end -->
 
       <dt>
         Event
       </dt>
-      <!-- Display event_id start -->
       <dd>
         <% if @race.event.present? %>
           <a href="/events/<%= @race.event_id %>">
@@ -49,50 +42,40 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display event_id end -->
 
       <dt>
         Year
       </dt>
-      <!-- Display year_id start -->
       <dd>
         <%= @race.year_id %>
       </dd>
-      <!-- Display year_id end -->
 
       <dt>
         Location
       </dt>
-      <!-- Display location_id start -->
       <dd>
         <div>
           <%= render partial: "race_templates/one_photo_map" %>
         </div>
       </dd>
-      <!-- Display location_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@race.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@race.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "race_templates/race_results" %>
@@ -104,4 +87,3 @@
     <%= render partial: "race_templates/race_users" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

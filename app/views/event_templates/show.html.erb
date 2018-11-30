@@ -11,67 +11,53 @@
         </a>
       </div>
 
-      <!-- Edit link event start -->
       <div class="col">
         <a href="/events/<%= @event.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit event
         </a>
       </div>
-      <!-- Edit link event end -->
 
-      <!-- Delete link event start -->
       <div class="col">
         <a href="/delete_event/<%= @event.id %>" class="btn btn-block btn-outline-secondary">
           Delete event
         </a>
       </div>
-      <!-- Delete link event end -->
     </div>
 
     <dl>
       <dt>
         Distance
       </dt>
-      <!-- Display distance_id start -->
       <dd>
         <%= @event.distance_id %>
       </dd>
-      <!-- Display distance_id end -->
 
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @event.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@event.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@event.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "event_templates/event_races" %>
   </div>
 </div>
-<!-- Show Page Customization end -->
